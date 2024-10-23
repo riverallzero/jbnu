@@ -1,0 +1,1 @@
+- A1: market.csv 데이터를 이용해 A-Priori Algorithm으로 Association Rules를 찾아라.

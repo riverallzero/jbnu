@@ -1,0 +1,14 @@
+# Byte-compiled
+**/.__pycache__
+
+# Pycharm
+**/.idea
+
+# Mac
+**/.DS_Store
+
+# Jupyter
+**/.ipynb_checkpoints
+
+# Model
+**/*.pkl
