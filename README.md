@@ -1,4 +1,4 @@
-# Lecture Code ZIP.
+### Assignment Code ZIP.
 
 |year|semester|lecture|dir.|dep.|prof.|
 |:--:|:--:|:--:|:--:|:--:|:--:|
