@@ -1,6 +1,6 @@
 from tqdm import tqdm
 
-class PageRank:
+class PageRank():
     def __init__(self, filepath):
         self.filepath = filepath
         self.graph = {}
@@ -14,6 +14,32 @@ class PageRank:
         self.B_tilde_transpose_matrix = []
         self.G_matrix = []
         self.beta = 0.85
+        self.c = 50
+
+        """
+        graph: dict
+            - 'from_node'를 key로, 'from_node'에서부터 출발하는 모든 'to_node'를 value로 설정
+        node: list
+            - graph에서 key를 기준으로 정렬한 node
+        node_idx: dict
+            - node를 key로, graph에서 node의 index를 value로 설정
+        D_inverse_matrix: list
+            - D^(-1): out degree의 역수 matrix
+        A_matrix: list
+            - A: adjacency matrix
+        A_tilde_matrix: list
+            - Ã: D^(-1) * A
+        B_tilde_matrix: list
+            - B̃: Ã를 column stochastic하게 수정한 matrix 
+            - column 값의 합이 1이 아닌 경우, 1/n으로 값을 채워넣음
+        G_matrix: list
+            - G: beta * B̃^T + (1-beta)[1/n]_(nxn)
+        beta: float
+            - 0.8 ~ 0.9 사이값
+            - 0.85로 흔히 사용
+        c: int
+            - convergence threshold
+        """
 
     def build_graph(self):
         with open(self.filepath, 'r') as lines:
@@ -35,9 +61,6 @@ class PageRank:
         self.calculate_B_tilde_matrix()
         self.calculate_G_matrix()
 
-    """
-    D^(-1): out degree의 역수 matrix
-    """
     def calculate_D_inverse_matrix(self):
         self.D_inverse_matrix = [[0] * self.n for _ in range(self.n)]
 
@@ -51,9 +74,6 @@ class PageRank:
 
         print('=> [done] calculation: D Matrix')
 
-    """
-    A: adjacency matrix
-    """
     def calculate_A_matrix(self):
         self.A_matrix = [[0] * self.n for _ in range(self.n)]
 
@@ -65,9 +85,6 @@ class PageRank:
 
         print('=> [done] calculation: A Matrix')
 
-    """
-    Ã: D^(-1) * A
-    """
     def calculate_A_tilde_matrix(self):
         self.A_tilde_matrix = [[0] * self.n for _ in range(self.n)]
 
@@ -77,10 +94,6 @@ class PageRank:
 
         print('=> [done] calculation: Ã Matrix')
 
-    """
-    B̃: Ã를 column stochastic하게 수정한 matrix 
-    - column 값의 합이 1이 아닌 경우, 1/n으로 값을 채워넣음
-    """
     def calculate_B_tilde_matrix(self):
         self.B_tilde_matrix = self.A_tilde_matrix.copy()
 
@@ -94,9 +107,6 @@ class PageRank:
 
         print('=> [done] calculation: B̃ Matrix')
 
-    """
-    G: beta * B̃^T + (1-beta)[1/n]_(nxn)
-    """
     def calculate_G_matrix(self):
         self.G_matrix = [[0] * self.n for _ in range(self.n)]
 
@@ -107,7 +117,7 @@ class PageRank:
         print('=> [done] calculation: G Matrix')
 
     def run_power_iteration(self):
-        for t in tqdm(range(50)):
+        for t in tqdm(range(self.c)):
             if t == 0:
                 self.r_t = [1/self.n for _ in range(self.n)]
             else:
