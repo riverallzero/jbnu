@@ -1,1 +1,2 @@
 - A1: market.csv 데이터를 이용해 A-Priori Algorithm으로 Association Rules를 찾아라.
+- A2: web-Google.txt 데이터를 이용해 Power Iteration으로 각 노드별 중요도를 계산하고 높은 순부터 낮은 순으로 정렬하여라.
