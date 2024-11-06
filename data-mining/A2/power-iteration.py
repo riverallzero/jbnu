@@ -1,5 +1,6 @@
 from tqdm import tqdm
 
+# https://github.com/yuhc/web-dataset/blob/master/web-Google/web-Google.txt
 filepath = '/Users/dayoung/Code/jbnu/data-mining/A2/web-Google.txt'
 
 """
