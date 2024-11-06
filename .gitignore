@@ -14,4 +14,4 @@
 **/*.pkl
 
 # Data
-./data-mining/A2/web-Google.txt
+data-mining/A2/web-Google.txt
