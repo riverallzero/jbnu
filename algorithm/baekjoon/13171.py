@@ -49,7 +49,7 @@ def calPower(A, X):
     return result
 
 if __name__ == '__main__':
-   # answer = 27
+    # answer = 27
     # inputs = [
     #     '100\n',
     #     '100'
