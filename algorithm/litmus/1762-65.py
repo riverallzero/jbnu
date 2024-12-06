@@ -1,31 +1,39 @@
-def canPut(c, r):
-    for c_col in range(c):
-        q_row = queen_col_locs[c_col]
+def nQueen(n):
+    counts = 0
+    def backTracking(row):
+        nonlocal counts
+        if row == n:
+            counts += 1
+            return counts
 
-        if q_row == r: # 같은 행에 위치한 경우
-            return False
-        elif abs(q_row-r) == abs(c-c_col): # 대각선에 위치한 경우
-            return False
-        
-    return True
+        for j in range(n if row else n//2):
+            if not col[j] and not d1[row-j] and not d2[row+j]:
+                col[j] = True
+                d1[row-j] = True # ↘ 
+                d2[row+j] = True # ↙
 
-def dfs(c):
-    case_ctr = 0
+                backTracking(row+1)
 
-    if c == N:
-        return 1
+                col[j] = False
+                d1[row-j] = False
+                d2[row+j] = False
 
-    for n in range(N):
-        if canPut(c, n):
-            queen_col_locs[c] = n 
-            case_ctr += dfs(c+1) # 열 +1씩 증가시키며 탐색 후 경우의 수 세기
-            queen_col_locs[c] = None # 다시 탐색하도록 초기화
+    col = [False for _ in range(n)]
+    d1 = [False for _ in range(n*2)]
+    d2 = [False for _ in range(n*2)]
 
-    return case_ctr
+    if n % 2: # 홀수: 절반 계산 후 중앙 열의 경우를 추가적으로 계산
+        backTracking(0)
+        counts *= 2
+        j = n//2
+        col[j] = d1[-j] = d2[j] = True
+        backTracking(1)
+    else: # 짝수: 절반만 계산한 뒤 결과를 2배로 곱합
+        backTracking(0)
+        counts *= 2
+
+    return counts
 
 if __name__ == '__main__':  
     N = int(input())
-    queen_col_locs = [None for _ in range(N)] # 퀸은 무조건 열에 1개 이하 존재, 열별로 어떤 행에 퀸이 놓여있는지 나타냄
-    
-    result = dfs(0)
-    print(result)
+    print(nQueen(N))
