@@ -14,12 +14,13 @@ def findMin(N, order_arr):
         
         remove_idx = -1
         last_idx = -1
+        remain_items = set(order_arr[i+1:])
         for p, p_item in enumerate(power_strip):
-            if p_item not in order_arr[i+1:]:
+            if p_item not in remain_items:
                 remove_idx = p
                 break
             else:
-                next_idx = order_arr[i+1:].index(p_item)
+                next_idx = order_arr.index(p_item, i+1)
                 if next_idx > last_idx:
                     last_idx = next_idx
                     remove_idx = p

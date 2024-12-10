@@ -69,8 +69,10 @@ def bfs(input_list, target_list):
                 queue.append((trans_list, depth + 1))
     
 if __name__ == '__main__':  
+    # answer = 5
+    # inputs = '6 4 2 8 1 3 5 7'
+
     init_list = ['1', '2', '3', '4', '5', '6', '7', '8']
     target_list = list(input().split(' '))
 
-    result = bfs(init_list, target_list)
-    print(result)
+    print(bfs(init_list, target_list))

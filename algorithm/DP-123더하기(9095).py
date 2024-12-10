@@ -3,11 +3,11 @@ import sys
 def findCtr():
     ctr_arr = [0] * 11
 
-    ctr_arr[1] = 1 # 1
-    ctr_arr[2] = 2 # 1+1, 2
-    ctr_arr[3] = 4 # 1+1+1, 2+1, 1+2, 3
+    ctr_arr[0] = 1 # 1
+    ctr_arr[1] = 2 # 1+1, 2
+    ctr_arr[2] = 4 # 1+1+1, 2+1, 1+2, 3
 
-    for i in range(4, 11):
+    for i in range(3, 11):
         ctr_arr[i] = ctr_arr[i-1] + ctr_arr[i-2] + ctr_arr[i-3]
 
     return ctr_arr
@@ -32,4 +32,4 @@ if __name__ == '__main__':
     ctr_arr = findCtr()
 
     for case in cases:
-        print(ctr_arr[case])
+        print(ctr_arr[case-1])

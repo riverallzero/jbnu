@@ -35,4 +35,4 @@ if __name__ == '__main__':
     datas = list(map(int, inputs[1].split()))  
     budget = int(inputs[-1]) 
 
-    print(calCap(datas, budget)) 
+    print(calCap(datas, budget))
