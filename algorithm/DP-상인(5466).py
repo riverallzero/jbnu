@@ -67,15 +67,15 @@ def processMarket(market):
 
 if __name__ == '__main__':
     # answer = 50
-    inputs = [
-        '4 5 3 100\n',
-        '2 80 100\n',
-        '20 125 130\n',
-        '10 75 150\n',
-        '5 120 110'
-    ]
+    # inputs = [
+    #     '4 5 3 100\n',
+    #     '2 80 100\n',
+    #     '20 125 130\n',
+    #     '10 75 150\n',
+    #     '5 120 110'
+    # ]
 
-    # inputs = sys.stdin.readlines()
+    inputs = sys.stdin.readlines()
 
     N, U, D, S = map(int, inputs[0].split())
 
