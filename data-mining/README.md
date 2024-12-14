@@ -1,1 +1,3 @@
 - A1: market.csv 데이터를 이용해 A-Priori Algorithm으로 Association Rules를 찾아라.
+- A2: web-Google.txt 데이터를 이용해 Power Iteration으로 각 노드별 중요도를 계산하고 높은 순부터 낮은 순으로 정렬하여라.
+- A3: [kaggle-train.csv ](https://www.kaggle.com/t/bfe1d62966fe45558bb2f6b05a625538) 데이터를 이용해 Recommender System Model을 구축하고 Private Score 1.0 이하의 성능을 달성하라.

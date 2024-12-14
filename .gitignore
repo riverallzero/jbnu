@@ -12,3 +12,6 @@
 
 # Model
 **/*.pkl
+
+# Data
+data-mining/A2/web-Google.txt
