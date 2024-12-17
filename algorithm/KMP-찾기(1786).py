@@ -45,11 +45,11 @@ def find_pattern(text, pattern):
     return len(positions), positions
 
 if __name__ == '__main__':
-    text = input().strip()
-    pattern = input().strip()
+    text = input().strip() # ABC ABCDAB ABCDABCDABDE
+    pattern = input().strip() # ABCDABD
     
     count, positions = find_pattern(text, pattern)
     
-    print(count)
+    print(count) # 1
     if positions:
-        print(*positions)
+        print(*positions) # 16

@@ -19,9 +19,9 @@ def make_table(pattern):
     return table
 
 if __name__ == '__main__':
-    L = int(input().strip())
-    pattern = input().strip()
+    L = int(input().strip()) # 5
+    pattern = input().strip() # aaaaa
     
     table = make_table(pattern)
-    print(L-table[-1])
+    print(L-table[-1]) # 1
     

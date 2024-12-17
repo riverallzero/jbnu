@@ -41,9 +41,9 @@ def make_table(pattern):
 
 if __name__ == '__main__':
     while True:
-        text = input().strip()
+        text = input().strip() # abcd
 
         if text == '.':
             break
         else:
-            print(result(text))
+            print(result(text)) # 1
