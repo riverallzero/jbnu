@@ -41,6 +41,6 @@ if __name__ == '__main__':
     inputs = sys.stdin.readlines()
 
     N, M = map(int, inputs[0].split())
-    arr = [(int(val.split()[0]), int(val.split()[1])) for val in inputs[1:]]
+    arr = [tuple(map(int, val.split())) for val in inputs[1:]]
 
     print(makeLine(arr))
