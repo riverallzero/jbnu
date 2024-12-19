@@ -41,7 +41,10 @@ if __name__ == '__main__':
     graph = {i+1: [] for i in range(N)}
 
     for line in inputs[1:]:
-        u, v = map(int, line.strip().split())
+        try:
+            u, v = map(int, line.strip().split())
+        except:
+            continue
 
         graph[u].append((v,1))
 
