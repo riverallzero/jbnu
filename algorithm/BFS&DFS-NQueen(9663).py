@@ -1,3 +1,6 @@
+# BFS & DFS, N-Queen 1
+# 퀸 N개를 서로 공격할 수 없게 놓는 경우의 수를 출력하라
+
 def nQueen(c, cols, left_2_right, right_2_left):
     global N
     

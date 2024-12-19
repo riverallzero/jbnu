@@ -1,3 +1,6 @@
+# BFS & DFS, 특별한 오름
+# 오름에서 선생님을 피해 찍을 수 있는 사진의 아름다움의 최댓값을 출력하라
+
 import sys
 from collections import deque
 

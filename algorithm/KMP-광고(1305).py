@@ -1,3 +1,6 @@
+# KMP, 광고
+# 세준이가 어느 순간 전광판을 쳐다봤을 때, 그 때 쓰여 있는 문자가 입력으로 주어졌을 때, 가능한 광고의 길이중 가장 짧은 것을 출력하라
+
 def make_table(pattern):
     pattern_size = len(pattern)
     table = [0] * pattern_size

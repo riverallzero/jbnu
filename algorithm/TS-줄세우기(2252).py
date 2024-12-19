@@ -1,3 +1,7 @@
+# Tology Sorting, 줄 세우기
+# 일부 학생들의 키를 비교한 결과가 주어졌을 때, 줄을 세워라
+# 명시되지 않은 순서는 오름차순 정렬
+
 import sys
 from collections import defaultdict, deque
 

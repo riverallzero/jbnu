@@ -1,3 +1,7 @@
+# BFS & DFS, 돌리기
+# 초기 상태에 있는 매직 스퀘어에 A, B, C, D 변환을 어느 횟수만큼 하여
+# 지정한 상태의 매직 스퀘어를 만드는 최소의 동작 방법을 계산하라
+
 from collections import deque
 
 def aTrans(input_list):

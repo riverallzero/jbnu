@@ -1,3 +1,6 @@
+# BFS & DFS, 점프왕젤리
+# ‘쩰리’가 끝 점에 도달할 수 있으면 “HaruHaru”(인용부호 없이), 도달할 수 없으면 “Hing” (인용부호 없이)을 한 줄에 출력하라
+
 import sys
 
 def canGo(curr_locs, visited):
@@ -31,3 +34,4 @@ if __name__ == '__main__':
     visited = [[False for _ in range(N)] for _ in range(N)]
     
     print(canGo((0, 0), visited))
+    

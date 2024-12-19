@@ -1,3 +1,7 @@
+# KMP, 찾기
+# 두 개의 문자열 P와 T에 대해, 문자열 P가 문자열 T 중간에 몇 번, 어느 위치에서 나타나는지 알아내는 문제=문자열 매칭 
+# T와 P가 주어졌을 때, 문자열 매칭 문제를 해결하는 프로그램
+
 def make_table(pattern):
     pattern_size = len(pattern)
     table = [0] * pattern_size

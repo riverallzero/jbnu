@@ -1,3 +1,6 @@
+# Dijkstra, 최단경로
+# 방향그래프가 주어지면 주어진 시작점에서 다른 모든 정점으로의 최단 경로를 구하라
+
 import heapq
 import sys
 
@@ -23,10 +26,22 @@ def findMin(graph, start):
     return costs
 
 if __name__ == '__main__':
+    # answer = 0 \n 2 \n 3 \n 7 \n INF
+    # inputs = [
+    #     '5 6\n',
+    #     '1\n',
+    #     '5 1 1\n',
+    #     '1 2 2\n',
+    #     '1 3 3\n',
+    #     '2 3 4\n',
+    #     '2 4 5\n',
+    #     '3 4 6'
+    # ]
+
     inputs = sys.stdin.readlines()
 
-    V, E = map(int, inputs[0].strip().split()) # num of vertex, num of edge
-    K = int(inputs[1].strip()) # start vertex
+    V, E = map(int, inputs[0].strip().split()) 
+    K = int(inputs[1].strip())
 
     graph = {i + 1: [] for i in range(V)}
 
@@ -42,3 +57,4 @@ if __name__ == '__main__':
             print('INF')
         else:
             print(result)
+            

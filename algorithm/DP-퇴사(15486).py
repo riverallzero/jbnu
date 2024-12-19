@@ -1,3 +1,6 @@
+# DP, 퇴사
+# 상담을 적절히 했을 때, 백준이가 얻을 수 있는 최대 수익을 구하라
+
 import sys
 
 def findMax(N, T, P):

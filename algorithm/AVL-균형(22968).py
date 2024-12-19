@@ -1,3 +1,6 @@
+# AVL Tree, 균형
+# 양의 정수 V가 주어지면, 최대 V개의 정점을 사용해서 만들 수 있는 AVL Tree의 최대 높이를 출력하라
+
 import sys
 
 if __name__ == '__main__':

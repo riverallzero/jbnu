@@ -1,3 +1,7 @@
+# Bellman-Ford, 타임머신
+# 1번 도시에서 출발해서 나머지 도시로 가는 가장 빠른 시간을 구하라.
+# A -> B 일때 비용 C 발생
+
 import sys
 
 def findPath(N, arr):

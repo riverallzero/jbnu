@@ -1,3 +1,6 @@
+# DC, A
+# A^x를 구하라
+
 import sys
 
 def makeList(A, X):

@@ -1,3 +1,6 @@
+# Greedy, 멀티탭 스케줄링
+# 하나씩 플러그를 빼는 최소의 횟수를 출력하라
+
 import sys
 
 def findMin(N, order_arr):

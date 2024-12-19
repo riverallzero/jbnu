@@ -1,3 +1,6 @@
+# KMP, 문자열 제곱
+# 문자열 s가 주어졌을 때, 어떤 문자열 a에 대해서 s=a^n을 만족하는 가장 큰 n을 찾아라.
+
 def result(text):
     if not text: 
         return 0
@@ -12,7 +15,7 @@ def result(text):
     if length % pattern_length != 0:
         return 1
         
-    # 반복되느느 패턴인지 확인
+    # 반복되는 패턴인지 확인
     base_string = text[:pattern_length]
     if base_string * (length // pattern_length) == text:
         return length // pattern_length
